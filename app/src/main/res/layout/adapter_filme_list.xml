@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:id="@+id/card_view"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="6dp"
+    android:layout_marginRight="6dp"
+    android:layout_margin="6dp"
+    android:foreground="?attr/selectableItemBackground"
+    app:cardCornerRadius="0dp"
+    app:cardPreventCornerOverlap="false"
+    app:cardUseCompatPadding="false"
+    card_view:cardElevation="0dp"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imgFilme"
+                android:layout_width="300dp"
+                android:layout_height="250dp"
+                android:src="@drawable/filme"
+                android:adjustViewBounds="false"
+                android:cropToPadding="true"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:scaleType="fitCenter" />
+
+            <include
+                layout="@layout/include_progress" />
+
+            <TextView
+                android:id="@+id/titleTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:fontFamily="sans-serif-condensed"
+                android:gravity="top|center"
+                android:lines="1"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:typeface="serif"
+                android:background="@color/black"
+                android:layout_marginRight="6dp" />
+
+            <TextView
+                android:id="@+id/sinopse"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="6dp"
+                android:background="@color/black"
+                android:lines="3"
+                android:text="MATRIX"
+                android:textColor="@color/white"
+                android:textSize="8sp"
+                android:layout_marginRight="6dp"
+                android:gravity="center_vertical|center_horizontal" />
+
+        </FrameLayout>
+    </LinearLayout>
+</android.support.v7.widget.CardView>
