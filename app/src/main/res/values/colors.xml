@@ -21,7 +21,8 @@
     <color name="refresh_progress_2">#99CC00</color>
     <!-- verde -->
     <color name="refresh_progress_3">#CC0000</color>
-    <color name="black">#8c000000</color>
+    <color name="black">#000</color>
+    <color name="black_transparente">#86767676</color>
     <!-- vermelho -->
 
 </resources>

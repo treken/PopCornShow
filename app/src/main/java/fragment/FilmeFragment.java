@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v4.app.Fragment;
-import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -19,13 +18,11 @@ import java.util.List;
 
 import br.com.icaro.filme.R;
 import domian.FilmeService;
-import info.movito.themoviedbapi.model.Artwork;
+import info.movito.themoviedbapi.model.Genre;
 import info.movito.themoviedbapi.model.MovieDb;
 import utils.Constantes;
 
-import static br.com.icaro.filme.R.id.toolbar;
-import static br.com.icaro.filme.R.string.movie;
-import static com.google.common.collect.ComparisonChain.start;
+import static br.com.icaro.filme.R.id.img_poster;
 
 
 /**
@@ -40,6 +37,7 @@ public class FilmeFragment extends Fragment {
     int id_filme;
     CollapsingToolbarLayout collapsingToolbarLayout;
     String titulo;
+
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -84,22 +82,14 @@ public class FilmeFragment extends Fragment {
         }
     }
 
-    public String getImagemTopo(final MovieDb movieDb) {
+    public void getImagemTopo(final MovieDb movieDb) {
 
         String urlBase = "http://image.tmdb.org/t/p/";
         final StringBuilder stringBuilder = new StringBuilder(urlBase);
         stringBuilder.append("/")
-                .append("w500");
-        new Thread() {
-            @Override
-            public void run() {
-                String string = movieDb.getBackdropPath();
-                stringBuilder.append(string);
-
-            }
-        }.run();
+                .append("w780");
         Log.d("Aqui", stringBuilder.toString());
-        return stringBuilder.toString();
+        Picasso.with(getContext()).load(stringBuilder+movieDb.getBackdropPath()).into(img_top);
     }
 
 
@@ -114,12 +104,7 @@ public class FilmeFragment extends Fragment {
         }
 
         @Override
-        protected MovieDb doInBackground(Void... voids) {
-//            TmdbMovies movies = new TmdbApi("fb14e77a32282ed59a8122a266010b70").getMovies();
-//            Log.d("FilmeFragment.doIn", "ID: " + id_filme);
-//            movieDb = movies.getMovie(291805, Constantes.PORTUGUES, credits, videos, releases, images, similar, reviews);
-//            Log.d("FilmeFragment.doIn", "Filme: " + movieDb.toString());
-//            return movieDb;
+        protected MovieDb doInBackground(Void... voids) {//
             Log.d("FilmeFragment", "doInBackground :" + id_filme);
             return FilmeService.getTmdbMovie(id_filme, "pt-BR");
         }
@@ -129,8 +114,7 @@ public class FilmeFragment extends Fragment {
             super.onPostExecute(movieDb);
             collapsingToolbarLayout.setTitle(movieDb.getTitle());
             collapsingToolbarLayout.setExpandedTitleMarginEnd(6);
-            Picasso.with(getContext()).load(getImagemTopo(movieDb)).into(img_top);
-
+            getImagemTopo(movieDb);
         }
     }
 

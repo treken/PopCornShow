@@ -29,9 +29,17 @@
             android:id="@+id/collapsing_toolbar"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:fitsSystemWindows="false"
             app:contentScrim="?attr/colorPrimary"
-            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            android:fitsSystemWindows="true">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                android:background="#ef0505"/>
 
             <ImageView
                 android:id="@+id/img_top"
@@ -40,22 +48,13 @@
                 android:fitsSystemWindows="false"
                 android:src="@drawable/filme"
                 app:layout_collapseMode="parallax"
-                app:layout_collapseParallaxMultiplier="1.0" />
-
-            <android.support.v7.widget.Toolbar
-                android:id="@+id/toolbar"
-                android:layout_width="match_parent"
-                android:layout_height="?attr/actionBarSize"
-                app:layout_collapseMode="pin"
-                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-                />
+                app:layout_collapseParallaxMultiplier="1.0"
+                android:elevation="0dp"
+                android:scaleType="centerCrop"
+                android:layout_gravity="center_horizontal" />
 
         </android.support.design.widget.CollapsingToolbarLayout>
 
     </android.support.design.widget.AppBarLayout>
 
-<TextView
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:text="adneindaendaendau"/>
 </android.support.design.widget.CoordinatorLayout>

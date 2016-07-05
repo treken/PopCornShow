@@ -19,7 +19,6 @@ public class FilmesActivity extends BaseActivity {
         setUpToolBar();
         setupNavDrawer();
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        Toast.makeText(this, "Lat/Lng: %s/%s - Usar em generos", Toast.LENGTH_SHORT).show();
         getSupportActionBar().setTitle(getString(getIntent().getIntExtra(Constantes.NAV_DRAW_ESCOLIDO, 0)));
         if (savedInstanceState == null) {
             ListFilmesFragment listFilmesFragment = new ListFilmesFragment();

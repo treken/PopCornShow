@@ -18,4 +18,8 @@
     <string name="categoria">Categoria:</string>
     <string name="time">Tempo:</string>
     <string name="metascore">Metascore</string>
+    <string name="sem_sinopse">Sem Sinopse</string>
+    <string name="minutos">Min</string>
+    <string name="não_informado">Não Informado</string>
+    <string name="votos">Votos</string>
 </resources>

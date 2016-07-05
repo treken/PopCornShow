@@ -48,7 +48,7 @@
                 android:textColor="@color/white"
                 android:textSize="15sp"
                 android:typeface="serif"
-                android:background="@color/black"
+                android:background="@color/black_transparente"
                 android:layout_marginRight="6dp" />
 
             <TextView
@@ -57,7 +57,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom"
                 android:layout_marginLeft="6dp"
-                android:background="@color/black"
+                android:background="@color/black_transparente"
                 android:lines="3"
                 android:text="MATRIX"
                 android:textColor="@color/white"

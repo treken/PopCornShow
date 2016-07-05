@@ -13,9 +13,8 @@ public class FilmeActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_filme);
         setUpToolBar();
+        setupNavDrawer();
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setDisplayShowCustomEnabled(true);
         if (savedInstanceState == null) {
             FilmeFragment filmeFrag = new FilmeFragment();
             Bundle bundle = new Bundle(); //Tentar pegar nome que esta no bundle
