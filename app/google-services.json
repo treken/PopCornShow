@@ -13,16 +13,7 @@
           "package_name": "br.com.icaro.filme"
         }
       },
-      "oauth_client": [
-        {
-          "client_id": "101446616560-g3o81adj2bna23jujo4lpn9jgh71001v.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "br.com.icaro.filme",
-            "certificate_hash": "0B82D545A66AED35780AE11D7D2127F888804C65"
-          }
-        }
-      ],
+      "oauth_client": [],
       "api_key": [
         {
           "current_key": "AIzaSyB-ICQDOMCh8UXzSmaylf9Xp4Hs9847OCA"
