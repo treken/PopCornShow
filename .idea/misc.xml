@@ -4,10 +4,6 @@
     <option name="FORCE_JUMBO" value="true" />
     <option name="CORE_LIBRARY" value="true" />
   </component>
-  <component name="JavacSettings">
-    <option name="DEBUGGING_INFO" value="false" />
-    <option name="DEPRECATION" value="false" />
-  </component>
   <component name="NullableNotNullManager">
     <option name="myDefaultNullable" value="android.support.annotation.Nullable" />
     <option name="myDefaultNotNull" value="android.support.annotation.NonNull" />
